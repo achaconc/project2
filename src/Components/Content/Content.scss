@@ -1,0 +1,26 @@
+.container_component {
+    max-width: 100%;
+    .alert_component 
+    {   
+        font-size: 18px;
+        color: rgb(36, 29, 29);
+        padding: 3rem;
+        padding-bottom: 0;
+    }
+    .card-group {
+        .card_component {
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.26);
+            margin: 2rem;
+            font-family: 'Roboto', sans-serif;
+
+            .card-text {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                color: rgb(36, 29, 29);
+            }
+        }
+    }
+}
+
+  

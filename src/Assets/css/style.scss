@@ -1,0 +1,128 @@
+$pink: #e6007d;
+$yellow: #ffdc00;
+$grey: #595959;
+$greyLight: #F3F3F3;
+$white: #fff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 30px; 
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 24px;
+    span {
+        font-weight: 700;
+        font-size: 24px;
+    }
+}
+
+:target {
+    display: block;
+    position: relative;
+    top: -100px; 
+    visibility: hidden;
+    @media(max-width: 768px) {
+        top: - 215px;
+    }
+}
+
+header {
+    background-image: linear-gradient(to right, $pink, $yellow);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @media(max-width: 1024px) {
+            padding: 0 15px;
+        }
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    .logo {
+        width: 150px;
+    }
+    nav {
+        @media(max-width: 768px) {
+            margin-top: 15px;
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 20px;
+            font-weight: 700;
+            &:hover {
+                text-decoration: underline;
+            }
+            @media(max-width: 768px) {
+                display: block;
+                text-align: center;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+section {
+    border: 1px solid black;
+    padding: 15px;
+    margin-bottom: 25px;
+    @media(max-width: 768px) {
+        margin: 15px;
+    }
+    > div {
+        display: flex;
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+        > div {
+            width: 50%;
+            @media(max-width: 768px) {
+                width: 100%;
+            }
+        }
+    }
+    p {
+        margin-top: 20px;
+    }
+}
+
+#intro {
+    padding: 25px;
+    p {
+        background-color: $greyLight;
+        padding: 15px;
+        margin-top: 15px;
+    }
+}
+
+footer {
+    background-color: $grey;
+    padding: 15px 0;
+    .logo {
+        width: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+}
